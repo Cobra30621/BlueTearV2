@@ -1,20 +1,15 @@
-# 藍眼淚 AR 測試專案
+# BlueTear_unity
 
-Cilab 與曹松清畫家合作設計出以馬祖藍眼淚為主題的互動式畫展。
-使用手機拍攝藝術品後，顯示可互動的 AR 物件。
+- [總交接文件目錄](https://hackmd.io/bshavgPmR7iQqVW_mfMg6Q)
 
-- [Demo 影片](https://youtu.be/Nspw9eDcCSs)
+## Set up
 
-## 相關資訊
-
-- 使用套件
-    - [Imagine WebAR - Image Tracker](https://assetstore.unity.com/packages/tools/camera/imagine-webar-image-tracker-240128)
-        - 使用實驗室的 Google 帳號購買，如果要更新套件，請跟助理要帳號，然後用該 Google 帳號登入 Unity
-- 上架平台
-    - itch.io: https://cobra3279.itch.io/blue-tear-ar
+- Unity 版本 2021.3.18f1
+- Unity 教學:
+    - [Unity 十分钟快速入门 #U3D #Unity3D](https://www.youtube.com/watch?v=5azG7_Yzq9o):
+        - 含安裝方式
+    - [【教學】Unity 學習方向指引](https://hackmd.io/t8psZwSOQo29LwPkpmLcDA?view)
+- 安裝完後，用 Unity 打開 App
 
 
-## 相關教學
-- 在 WebGL 撥放影片
-    - [How to Play a Video in Unity WebGL (Simple)](https://www.youtube.com/watch?v=9UE3hLSHMTE)
 

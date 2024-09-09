@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SentryOptions
   m_EditorClassIdentifier: 
   <Enabled>k__BackingField: 1
-  <Dsn>k__BackingField: https://7520e2e880dc4eff19abc3738fcb7bb0@o4507429844418560.ingest.us.sentry.io/4507429852413952
+  <Dsn>k__BackingField: https://77100ab9e9a827532ad34b6dc67d617a@o4507429844418560.ingest.us.sentry.io/4507921731944448
   <CaptureInEditor>k__BackingField: 0
   <EnableLogDebouncing>k__BackingField: 0
   <DebounceTimeLog>k__BackingField: 1000
@@ -61,6 +61,7 @@ MonoBehaviour:
   <AndroidNativeSupportEnabled>k__BackingField: 1
   <NdkIntegrationEnabled>k__BackingField: 1
   <NdkScopeSyncEnabled>k__BackingField: 1
+  <PostGenerateGradleProjectCallbackOrder>k__BackingField: 1
   <WindowsNativeSupportEnabled>k__BackingField: 1
   <MacosNativeSupportEnabled>k__BackingField: 1
   <LinuxNativeSupportEnabled>k__BackingField: 1
