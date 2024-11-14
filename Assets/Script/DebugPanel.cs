@@ -20,7 +20,7 @@ namespace Script
         
         void Update()
         {
-            tMove.text = $"move: {GameProcess.HandPose}";
+            tMove.text = $"move: {string.Join(',', GameProcess.HandPoses) }";
             tStage.text = $"stage: {gameProcess.Stage}";
             tcFrame.text = $"sunFrame: {gameProcess.sunFrame}";
             tCount.text = $"count: {gameProcess.count}";
@@ -50,7 +50,7 @@ namespace Script
         
         private void OnApplicationQuit()
         {
-            Debug.Log($"App quit : {Time.time}, {GameProcess.HandPose}, {gameProcess.Stage}");
+            Debug.Log($"App quit : {Time.time},  {gameProcess.Stage}");
         }
     }
 }

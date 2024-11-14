@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Serialization;
 using UnityEngine.UI;
@@ -21,10 +23,12 @@ namespace Script
         /// 表示現在在哪個場景
         /// </summary>
         public string Stage;
+
         /// <summary>
         /// 目前的手勢
         /// </summary>
-        public static string HandPose;
+        public static List<string> HandPoses;
+        
         
         /// <summary>
         /// 主要負責計時，同時也會是一些音量、顏色淡入淡出的數值
@@ -138,7 +142,7 @@ namespace Script
             
             if (!change)
             {
-                if (Input.GetKey(KeyCode.D) || (HandPose == "SunRight")) // SunRight
+                if (Input.GetKey(KeyCode.D) || HandPoses.Contains("SunRight")) // SunRight
                 {
                     sunPlayer.PlaySunSet();
                 }
@@ -202,7 +206,7 @@ namespace Script
         {
             if (!change)
             {
-                if (Input.GetKey(KeyCode.W) || (HandPose == "CloseLight")) // CloseLight
+                if (Input.GetKey(KeyCode.W) || HandPoses.Contains("CloseLight")) // CloseLight
                 {
                     bLight = false;
                 }
@@ -275,7 +279,7 @@ namespace Script
                     itro.Play();
                 }
             
-                if ((Input.GetKey(KeyCode.W) || (HandPose == "Pray")) && (Mathf.Abs(Camera.position.x) < 10)) // Pray
+                if ((Input.GetKey(KeyCode.W) || HandPoses.Contains("Pray")) && (Mathf.Abs(Camera.position.x) < 10)) // Pray
                 {
                     count += 1;
                     if (count < 350)
@@ -291,16 +295,6 @@ namespace Script
                 else
                 {
                     Wind(0);
-                }
-        
-            
-                if (Input.GetKey(KeyCode.D) || (HandPose == "WindRight")) // WindRight
-                {
-                    Wind(1);
-                }
-                else if (Input.GetKey(KeyCode.A) || (HandPose == "WindLeft")) // WindLeft
-                {
-                    Wind(-1);
                 }
             
             }
@@ -338,7 +332,7 @@ namespace Script
         {
             if (!change)
             {
-                if (Input.GetKey(KeyCode.W) || (HandPose == "WindForward")) // WindForward
+                if (Input.GetKey(KeyCode.W) || HandPoses.Contains("WindForward")) // WindForward
                 {
                     BlueTear(true);
                 }
@@ -381,7 +375,7 @@ namespace Script
         /// </summary>
         private void HandleReloadCheck()
         {
-            if (!Input.anyKey && (HandPose == "noPose") && Stage != "Sun")
+            if (!Input.anyKey &&  HandPoses.Count == 1 && HandPoses.Contains("noPose")  && Stage != "Sun")
             {
                 reloadCount++;
             }

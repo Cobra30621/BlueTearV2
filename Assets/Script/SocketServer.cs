@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -75,7 +76,8 @@ namespace Script
             {
                 server.BeginAcceptTcpClient(HandleClientAccepted, server);
             }
-            GameProcess.HandPose = tMsg;
+
+            GameProcess.HandPoses = tMsg.Split(',').ToList();
         }
 
 
